@@ -1,0 +1,246 @@
+@import "style-general.scss";
+
+
+
+.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: $main-color;
+  color: $text-color;
+  &__socials{
+display: flex;
+align-items: center;
+:last-child{
+padding-right: 0;
+}
+
+a{
+  padding: 0 6px
+}
+  }
+ /* ::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }*/
+  &__body {
+    font-size: 14px;
+    background-color: $main-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    color: $text-color_dark;
+    .header {
+      &__firminfo{
+        display: flex;
+      align-items: center;
+svg{
+  margin-right: 6px;
+}
+      } 
+      &__phone{
+        &-link{
+          color: $text-color;
+        }
+      }
+      // .header__form
+      &__form {
+    
+    width: 100%;
+    max-width: 276px;
+    height: 36px;
+    input{
+      display: block;
+    padding: 11px 16px;
+    height: 36px;
+    width: 100%;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    background-color: #fff;
+    border-radius: 5px;
+border: none;
+    }
+      }
+  }
+  .field-search {
+    color: $text-color_dark;
+    font-size: 10px;
+      // .field-search__inner
+      &__inner {
+        position: relative;
+      }
+
+      // .field-search__btn-submit
+  
+      &__btn-submit {
+        position: absolute;
+    top: 50%;
+    right:0;
+    height: 100%;
+  background: $gradient-color;
+padding: 11px 13px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border: none;
+    border-radius: 0 5px 5px 0;
+      }
+  } 
+  }
+  &__burger {
+    display: none;
+  }
+  &__list {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    :first-child {
+      margin-left: 0;
+    }
+    li {
+      list-style: none;
+      margin: 0px 0px 0px 30px;
+      font-size: 12px;
+    }
+
+  }
+}
+.header__list{
+    padding: 0;
+
+}
+
+.header__burger.active::before {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  top: 9px;
+}
+.header__burger.active::after {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  bottom: 9px;
+}
+.header__burger.active span {
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+}
+
+@media (max-width: 767px) {
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+  }
+  .header__burger::before,
+  .header__burger::after {
+    content: "";
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+  }
+
+  .header__burger::before {
+    top: 0;
+  }
+  .header__burger::after {
+    bottom: 0;
+  }
+  .header__burger span {
+    background-color: white;
+    top: 9px;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+  }
+  .header__menu {
+    position: fixed;
+    overflow: auto;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 50px 10px 0px 10px;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+  }
+  .header__menu.active {
+    top: 0;
+    background-color: $main-color;
+  }
+
+  .header {
+    &__list {
+      display: block;
+      li {
+        font-size: 24px;
+        margin: 0px 0px 20px 0px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+/*меню*/
+.menu {
+  display: flex;
+  align-items: center;
+  // .menu__header
+
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+}
+.header {
+
+  // .header__logo
+
+  &__logo {
+  }
+}
+.side-menu {
+}
+.hamb {
+}
+.hamb-line {
+}
+.nav {
+}
+
